@@ -63,36 +63,39 @@ YUI.add( 'myrwa-banner', function(Y) {
                 //
                 // Every animPeriod seconds ease the current node out, and the new node in
                 //
-                Y.later( animPeriod * 1000, this, function(){
-                   var nextImageIndex = (currentImageIndex + 1) % imageNodes.size();
-                   var inNode = imageNodes.item( nextImageIndex );
-                   var outNode = imageNodes.item( currentImageIndex );
-                   //log( "banner transition from " + currentImageIndex + " to " + nextImageIndex );
-                   
-                   inNode.setStyles( { "opacity": 0, "display":"block" } );
-                   outNode.setStyles( { "opacity": 1, "display":"block" } );
-                   inNode.show();
-                   outNode.show();
-                   
-                   outNode.transition( 
-                           {
-                            easing: 'ease-out',
-                            duration: 0.75, // seconds
-                            opacity: 0
-                            }, 
-                        function() { outNode.hide(); } 
-                    );
-                    inNode.transition(
-                            {
-                             easing: 'ease-in',
-                             duration: 0.75,
-                             opacity: 1
-                            }
-                        );
-                    currentImageIndex = nextImageIndex;
-                }, 
-                [], true
-            );
+                Y.later( animPeriod * 1000, this, 
+                    function(){
+                        var nextImageIndex = (currentImageIndex + 1) % imageNodes.size();
+                        var inNode = imageNodes.item( nextImageIndex );
+                        var outNode = imageNodes.item( currentImageIndex );
+                        //log( "banner transition from " + currentImageIndex + " to " + nextImageIndex );
+
+                        inNode.setStyle( "opacity", 0 );
+                        outNode.setStyle( "opacity", 1 );
+                        inNode.show();
+                        outNode.show();
+
+                        outNode.transition( 
+                                {
+                                 easing: 'ease-out',
+                                 duration: 0.75, // seconds
+                                 opacity: 0
+                                 }, 
+                             function() { outNode.hide(); } 
+                         );
+                         inNode.transition(
+                                 {
+                                  easing: 'ease-in',
+                                  duration: 0.75,
+                                  opacity: 1
+                                 }
+                             );
+                         currentImageIndex = nextImageIndex;
+                    }, 
+                    [], true
+                );
+
+                this.rendered = true;
             }
         }, 
         {
