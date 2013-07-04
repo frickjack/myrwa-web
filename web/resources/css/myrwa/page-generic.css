@@ -1,0 +1,23 @@
+/* 
+ * CSS for a generic page - mostly copied from myrwa home page:
+ *    http://mysticriver.org/
+ */
+
+/* Requires modern browsers ... */
+* { box-sizing:border-box }
+
+body { 
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:0px;
+    background-color:#BBD3B5;
+}
+
+div#pageContainer {
+    background-color:#FFFFFF;
+    width:985px;
+    padding: 0px;
+    margin-left:auto;
+    margin-right:auto;    
+}
+

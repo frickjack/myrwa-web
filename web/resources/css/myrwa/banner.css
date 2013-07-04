@@ -1,0 +1,17 @@
+/**
+ * Styles for the animated image banner at the top of the page
+ */
+
+div.banner {
+    position:relative;
+    height:400px;
+}
+
+div.banner img {
+    position: absolute;
+    opacity: 0;
+}
+
+div.banner > img:first-child {
+    opacity:1;
+}
