@@ -68,4 +68,13 @@
     nbproject/build-impl.xml file. 
 
     -->
+
+    <!-- disable some stuff that requires a netbeans install -->
+    <target name="-init-taskdefs" />
+    <property name="j2ee.server.home" value="."/>
+
+    <target name="info" depends="init">
+        <echo>libs.CopyLibs.classpath: ${libs.CopyLibs.classpath}</echo>
+        <echo>user.properties.file: ${user.properties.file}</echo>
+    </target>
 </project>
