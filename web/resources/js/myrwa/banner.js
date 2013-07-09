@@ -40,7 +40,9 @@ YUI.add( 'myrwa-banner', function(Y) {
                 // do not setup the animation than once
                 if ( this.rendered ) return;
                 var container = this.get( "container" );
-                var imageNodes = container.all( "img" ); 
+                var logoNode = container.one( "img.logo" );
+                var imageNodes = container.all( "img" 
+                         ).filter( function(img) { return ! Y.Node(img).hasClass( "logo" ); } );
                 
                 Y.assert( "Found image nodes", imageNodes.size() > 0 );
                 
