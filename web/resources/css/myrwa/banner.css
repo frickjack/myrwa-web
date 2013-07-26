@@ -4,7 +4,8 @@
 
 div.banner {
     position:relative;
-    height:400px;
+    margin-top: 20px;
+    height:230px;
 }
 
 div.banner img {
@@ -14,7 +15,34 @@ div.banner img {
 
 div.banner img.logo { /* overlay logo on banner */
     opacity:1;
-    bottom:0;
+    bottom:25px;
+    right:0;
+}
+
+div.banner div.hello {
+position: absolute;
+bottom: 0;
+right:0;
+font-size: 130%;
+color: white;
+padding: 5px 10px 5px 150px;
+font-family: 'Scada', arial, Georgia, serif;
+}
+
+/* modernizr gradient feature detection */
+.no-cssgradients div.banner div.hello {
+   background-color: rgb(64, 124, 64); 
+}
+
+/* modernizr gradient feature detection */
+.cssgradients div.banner div.hello {
+    background-image: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(64, 124, 64,1) 25%);
+}
+
+div.banner div.hello span.morehello {
+    color: rgb(28, 207, 28);
+    font-family: arial, Georgia, serif;
+    font-size: 100%;   
 }
 
 div.banner > img:first-child {
