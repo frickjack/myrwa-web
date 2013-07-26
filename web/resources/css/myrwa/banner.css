@@ -27,15 +27,14 @@ font-size: 130%;
 color: white;
 padding: 5px 10px 5px 150px;
 font-family: 'Scada', arial, Georgia, serif;
+background-color: rgb(64, 124, 64); 
 }
 
-/* modernizr gradient feature detection */
-.no-cssgradients div.banner div.hello {
-   background-color: rgb(64, 124, 64); 
-}
 
 /* modernizr gradient feature detection */
 .cssgradients div.banner div.hello {
+    background-color: transparent;
+    background-image: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(64, 124, 64,1) 25%);
     background-image: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(64, 124, 64,1) 25%);
 }
 
