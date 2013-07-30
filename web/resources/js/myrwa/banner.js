@@ -11,8 +11,8 @@
  * YUI doc comments: http://developer.yahoo.com/yui/yuidoc/
  * YUI extension mechanism: http://developer.yahoo.com/yui/3/yui/#yuiadd
  *
- * @module littleware.littleMessage
- * @namespace littleware.littleMessage
+ * @module myrwa-banner
+ * @namespace myrwa
  */
 YUI.add( 'myrwa-banner', function(Y) {
     Y.namespace('myrwa');
